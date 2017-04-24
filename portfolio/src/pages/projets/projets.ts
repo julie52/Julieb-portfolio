@@ -1,3 +1,6 @@
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/timeout';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -13,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProjetsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  posts: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Projets');
+	constructor(public http: Http) {
+ 
+    this.http.get('http://blondeau.chalon.codeur.online/julieb-portfolio/API/api.php').map(res => res.json()).subscribe(data => {
+        console.log(data);
+        this.posts = data;
+    });
+ 
   }
-
 }
+  /*ionViewDidLoad() {
+    console.log('ionViewDidLoad Projets');
+  }*/
