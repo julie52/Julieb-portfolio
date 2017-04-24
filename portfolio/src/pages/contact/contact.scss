@@ -1,0 +1,31 @@
+page-contact {
+	.overlay{
+		background: linear-gradient(to bottom, #99ff99 0%, #ffffff 100%);
+	}
+ 	a{
+ 		text-decoration: none;
+ 	}
+ 	#contact{
+ 		font-size: 18px;
+ 		color: #009900;
+ 	}
+ 	label{
+ 		color: #009933;
+ 	}
+ 	#reseaux{
+ 		font-size: 18px;
+ 		color: #009900;
+ 	}
+ 	.lien{
+ 		font-size: 15px;
+ 		color: #009933;
+ 	}
+	#btn{
+ 		height: 35px;
+ 		width: 70px;
+ 		border-radius: 15px;
+ 		background-color: #66ff33;
+ 		color: black;
+ 		font-weight: bold;
+ 	}
+}
