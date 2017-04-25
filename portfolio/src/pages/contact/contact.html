@@ -10,12 +10,12 @@
   <ion-list>
     <ion-list-header><p id="contact">Pour me contacter :</p></ion-list-header>
     <ion-item class="overlay">
-      <form>
+      <form #form="ngForm" (ngSubmit)="logForm(form)">
         <table>
-          <tr><th><label>Nom :</label></th><td><input type="text" id="nom" name="user_name"></td></tr><br>
-          <tr><th><label>E-mail :</label></th><td><input type="email" id="courriel" name="user_email"></td></tr><br>
-          <tr><th><label>Message :</label></th><td><textarea id="message" name="user_message" rows="5" cols="16"></textarea></td></tr><br>
-          <tr><th></th><td><button id="btn" type="submit">Envoyer</button></td></tr>
+          <tr><th><label>Nom :</label></th><td><input type ="text" required [(ngModel)]="todo.nom" name="nom"  class="champ" placeholder="Votre nom"></td></tr><br>
+          <tr><th><label>E-mail :</label></th><td><input type="email" required [(ngModel)]="todo.mail" name="mail"  class="champ" placeholder="Votre adresse e-mail"></td></tr><br>
+          <tr><th><label>Message :</label></th><td> <textarea required [(ngModel)]="todo.message" name="message" rows="7" placeholder="Votre message"></textarea></td></tr><br>
+          <tr><th></th><td><input class="submit" type="submit" name="contact" value="Envoyer"></td></tr>
         </table>
       </form>
     </ion-item>
