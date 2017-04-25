@@ -1,9 +1,15 @@
 page-home {
 	.overlay{
-    background-color: lightblue;
+    background-image: url("../assets/images/fond.jpg");
+    background-size: 360px;
 	}
-	h3, h4, h5{
+	h3{
 		text-align: center;
-		color: white;
+		color: black;
+		margin-top: 190px;
+	}
+	h5{
+		text-align: center;
+		color: black;
 	}
 }
