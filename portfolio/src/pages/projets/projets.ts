@@ -20,13 +20,13 @@ export class ProjetsPage {
 
 	constructor(public http: Http) {
  
-    this.http.get('http://blondeau.chalon.codeur.online/julieb-portfolio/API/api.php').map(res => res.json()).subscribe(data => {
+    this.http.get('http://blondeau.chalon.codeur.online/julieb-portfolio/API/api.html').map(res => res.json()).subscribe(data => {
         console.log(data);
         this.posts = data;
     });
  
   }
 }
-  /*ionViewDidLoad() {
+  ionViewDidLoad() {
     console.log('ionViewDidLoad Projets');
-  }*/
+  }
